@@ -7,11 +7,11 @@ $response = $instagram->getPaginateMedias('nho_tojika');
 foreach ($response['medias'] as $media) {
     /** @var \InstagramScraper\Model\Media $media */
 
-    echo "Media info:" . PHP_EOL;
-    echo "Id: {$media->getId()}" . PHP_EOL;
-    echo "Shotrcode: {$media->getShortCode()}" . PHP_EOL;
-    echo "Created at: {$media->getCreatedTime()}" . PHP_EOL;
-    echo "Caption: {$media->getCaption()}" . PHP_EOL;
+    //echo "Media info:" . PHP_EOL;
+    //echo "Id: {$media->getId()}" . PHP_EOL;
+    //echo "Shotrcode: {$media->getShortCode()}" . PHP_EOL;
+    //echo "Created at: {$media->getCreatedTime()}" . PHP_EOL;
+    //echo "Caption: {$media->getCaption()}" . PHP_EOL;
     echo "Number of comments: {$media->getCommentsCount()}" . PHP_EOL;
     echo "Number of likes: {$media->getLikesCount()}" . PHP_EOL;
     echo "Get link: {$media->getLink()}" . PHP_EOL;
@@ -19,11 +19,11 @@ foreach ($response['medias'] as $media) {
     echo "Media type (video or image): {$media->getType()}" . PHP_EOL . PHP_EOL;
     $account = $media->getOwner();
 
-    echo "Account info:" . PHP_EOL;
-    echo "Id: {$account->getId()}" . PHP_EOL;
-    echo "Username: {$account->getUsername()}" . PHP_EOL;
-    echo "Full name: {$account->getFullName()}" . PHP_EOL;
-    echo "Profile pic url: {$account->getProfilePicUrl()}" . PHP_EOL;
+    //echo "Account info:" . PHP_EOL;
+    //echo "Id: {$account->getId()}" . PHP_EOL;
+    //echo "Username: {$account->getUsername()}" . PHP_EOL;
+    //echo "Full name: {$account->getFullName()}" . PHP_EOL;
+    //echo "Profile pic url: {$account->getProfilePicUrl()}" . PHP_EOL;
     echo  PHP_EOL  . PHP_EOL;
 }
 
