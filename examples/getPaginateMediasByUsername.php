@@ -2,7 +2,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 $instagram = new \InstagramScraper\Instagram();
-$response = $instagram->getPaginateMedias('kevin');
+$response = $instagram->getPaginateMedias('nho_tojika');
 
 foreach ($response['medias'] as $media) {
     /** @var \InstagramScraper\Model\Media $media */
