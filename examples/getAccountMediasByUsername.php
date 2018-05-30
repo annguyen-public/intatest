@@ -10,7 +10,7 @@ if(isset($_GET["u"]))
 }
 
 $instagram = new \InstagramScraper\Instagram();
-$medias = $instagram->getMedias($user_name, 50);
+$medias = $instagram->getMedias($user_name, 80);
 
 $scrapedData = array();
 foreach ($medias as $media) {
@@ -53,6 +53,6 @@ echo "Profile pic url: {$account->getProfilePicUrl()}\n";*/
 
 
 // If account private you should be subscribed and after auth it will be available
-$instagram = \InstagramScraper\Instagram::withCredentials('username', 'password', 'path/to/cache/folder');
-$instagram->login();
-$medias = $instagram->getMedias('private_account', 100);
+//$instagram = \InstagramScraper\Instagram::withCredentials('username', 'password', 'path/to/cache/folder');
+//$instagram->login();
+//$medias = $instagram->getMedias('private_account', 100);
