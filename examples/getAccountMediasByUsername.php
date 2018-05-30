@@ -10,7 +10,7 @@ if(isset($_GET["u"]))
 }
 
 $instagram = new \InstagramScraper\Instagram();
-$medias = $instagram->getMedias($user_name, 60);
+$medias = $instagram->getMedias($user_name, 50);
 
 $scrapedData = array();
 foreach ($medias as $media) {
