@@ -12,8 +12,10 @@ if(isset($_GET["u"]))
 $instagram = new \InstagramScraper\Instagram();
 $medias = $instagram->getMedias($user_name, 25);
 
+echo json_encode($medias);
+
 // Let's look at $media
-$media = $medias[0];
+/*$media = $medias[0];
 
 echo "Media info:\n";
 echo "Id: {$media->getId()}\n";
@@ -30,7 +32,7 @@ echo "Account info:\n";
 echo "Id: {$account->getId()}\n";
 echo "Username: {$account->getUsername()}\n";
 echo "Full name: {$account->getFullName()}\n";
-echo "Profile pic url: {$account->getProfilePicUrl()}\n";
+echo "Profile pic url: {$account->getProfilePicUrl()}\n";*/
 
 
 // If account private you should be subscribed and after auth it will be available
