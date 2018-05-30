@@ -13,7 +13,9 @@ $instagram = new \InstagramScraper\Instagram();
 $medias = $instagram->getMedias($user_name, 25);
 
 //$out = array_values($medias[0]);
-echo json_encode($medias[0]);
+//echo json_encode($medias[0]);
+
+echo serialize($medias[0]);
 
 // Let's look at $media
 /*$media = $medias[0];
