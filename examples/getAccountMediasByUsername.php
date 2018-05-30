@@ -9,8 +9,14 @@ if(isset($_GET["u"]))
   $user_name = $_GET["u"];
 }
 
+$count = 30;
+if(isset($_GET["c"]))
+{
+  $count = (int)$_GET["c"];
+}
+
 $instagram = new \InstagramScraper\Instagram();
-$medias = $instagram->getMedias($user_name, 50);
+$medias = $instagram->getMedias($user_name, $count);
 
 $scrapedData = array();
 foreach ($medias as $media) {
