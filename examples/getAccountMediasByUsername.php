@@ -12,7 +12,8 @@ if(isset($_GET["u"]))
 $instagram = new \InstagramScraper\Instagram();
 $medias = $instagram->getMedias($user_name, 25);
 
-echo json_encode($medias);
+$out = array_values($medias);
+echo json_encode($out);
 
 // Let's look at $media
 /*$media = $medias[0];
