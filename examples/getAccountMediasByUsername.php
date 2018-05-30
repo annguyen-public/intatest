@@ -14,10 +14,14 @@ $medias = $instagram->getMedias($user_name, 25);
 
 $scrapedData = array();
 foreach ($medias as $media) {
-	$scrapedData->media_id = $media->getId();
-	$scrapedData->url = $media->getImageHighResolutionUrl();
-	echo json_encode($scrapedData);
+	$data = array(
+				'id' => $media->getId(),
+				'url' => $media->getImageHighResolutionUrl()
+			);
+	array_push($scrapedData, $data);
 }
+
+echo json_encode($scrapedData);
 
 // Let's look at $media
 /*$media = $medias[0];
