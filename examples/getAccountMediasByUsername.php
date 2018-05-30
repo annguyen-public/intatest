@@ -14,7 +14,6 @@ $medias = $instagram->getMedias($user_name, 25);
 
 $scrapedData = array();
 foreach ($medias as $media) {
-<<<<<<< HEAD
 {
     $data = array(
         'id' => $media->getId(),
@@ -27,13 +26,6 @@ $jsonstring = json_encode($scrapedData);
 echo $jsonstring;
 
 
-=======
-	$scrapedData->media_id = $media->getId();
-	$scrapedData->url = $media->getImageHighResolutionUrl();
-	echo json_encode($scrapedData);
-}
-
->>>>>>> ee287a3eea4014a1428e90cbf5c96801538841a5
 
 
 // Let's look at $media
