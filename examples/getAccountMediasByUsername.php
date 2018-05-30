@@ -29,7 +29,7 @@ foreach ($medias as $media) {
 	array_push($scrapedData, $data);
 }
 
-echo (json_encode($scrapedData));
+echo stripslashes(json_encode($scrapedData));
 
 // Let's look at $media
 /*$media = $medias[0];
