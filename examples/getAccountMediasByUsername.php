@@ -3,8 +3,14 @@ require __DIR__ . '/../vendor/autoload.php';
 
 // If account is public you can query Instagram without auth
 
+$user_name = "";
+if(isset($_GET["u"]))
+{
+  $user_name = $_GET["u"];
+}
+
 $instagram = new \InstagramScraper\Instagram();
-$medias = $instagram->getMedias('nho_tojika', 25);
+$medias = $instagram->getMedias($user_name, 25);
 
 // Let's look at $media
 $media = $medias[0];
