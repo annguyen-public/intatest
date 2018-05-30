@@ -16,7 +16,7 @@ $scrapedData;
 
 foreach ($medias as $media) {
 	$scrapedData->media_id = $media->getId();
-	$scrapedData->url = $media->$media->getImageHighResolutionUrl();
+	$scrapedData->url = $media->getImageHighResolutionUrl();
 }
 
 echo json_encode($scrapedData);
