@@ -28,6 +28,8 @@ foreach ($medias as $media) {
 				'type' => $media->getType(),
 				'nsfw' => '0',
 				'content' => $media->getImageHighResolutionUrl(),
+				'like_count' => $media->getLikesCount(),
+				'comment_count' => $media->getCommentsCount(),
 				'acc_ur' => $account->getUsername(),
 				'acc_name' => $account->getFullName(),
 				'acc_pic' => $account->getProfilePicUrl()
